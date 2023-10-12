@@ -36,6 +36,25 @@
     "SOAPOutBound": { "LogProperties": { "LogLevel": "ERROR" } },
     "Applications": [
       {
+        "Name": "publicsector",
+        "ObjectManager": "psccobjmgr_enu",
+        "Language": "enu",
+        "StartCommand": "",
+        "EnableExtServiceOnly": false,
+        "AvailableInSiebelMobile": false,
+        "AuthenticationProperties": {
+          "SessionTimeout": 9000,
+          "GuestSessionTimeout": 300,
+          "SessionTimeoutWLMethod": "HeartBeat",
+          "SessionTimeoutWLCommand": "UpdatePrefMsg",
+          "SessionTokenMaxAge": 2880,
+          "SessionTokenTimeout": 9000,
+          "SingleSignOn": false,
+          "AnonUserName": "$ANONUSER",
+          "AnonPassword": "$ANONPASS"
+        }
+      },
+      {
         "Name": "callcenter",
         "ObjectManager": "sccobjmgr_enu",
         "Language": "enu",

@@ -1,11 +1,11 @@
-ROOT=/mnt/sauria/e/siebel/ConfiguringSiebel/Containerization/Docker/oraclelinux/classic-mde/manage/scripts/automate-architecture
+ROOT=/tmp/{{ NAME }}/ConfiguringSiebel/Containerization/Docker/oraclelinux/classic-mde/manage/scripts/automate-architecture
 PV=/home/shared/PV
 CONTAINERBASE=localhost/store/oracle/siebel
 DOMAIN=company.com
-ENTERPRISE1={{ ENTERPRISE }}
-DBHOST=oracle19c
+ENTERPRISE1={{ NAME }}
+DBHOST={{ DBHOST }}
 DBPORT=1521
-DBINST={{ DBINST }}
+DBINST={{ NAME }}
 TNSCONN=SIEBELDB
 DOCKERNET=siebelnet
 TBLO=SIEBEL

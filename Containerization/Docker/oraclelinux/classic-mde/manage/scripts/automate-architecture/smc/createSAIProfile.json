@@ -36,7 +36,7 @@
     "SOAPOutBound": { "LogProperties": { "LogLevel": "ERROR" } },
     "Applications": [
       {
-        "Name": "publicsector",
+        "Name": "epublicsector",
         "ObjectManager": "psccobjmgr_enu",
         "Language": "enu",
         "StartCommand": "",
@@ -55,8 +55,27 @@
         }
       },
       {
-        "Name": "callcenter",
-        "ObjectManager": "sccobjmgr_enu",
+        "Name": "epublicsector_db",
+        "ObjectManager": "psccobjmgr_enu",
+        "Language": "enu",
+        "StartCommand": "",
+        "EnableExtServiceOnly": false,
+        "AvailableInSiebelMobile": false,
+        "AuthenticationProperties": {
+          "SessionTimeout": 9000,
+          "GuestSessionTimeout": 300,
+          "SessionTimeoutWLMethod": "HeartBeat",
+          "SessionTimeoutWLCommand": "UpdatePrefMsg",
+          "SessionTokenMaxAge": 2880,
+          "SessionTokenTimeout": 9000,
+          "SingleSignOn": false,
+          "AnonUserName": "$ANONUSER",
+          "AnonPassword": "$ANONPASS"
+        }
+      },
+      {
+        "Name": "epublicsector_ext",
+        "ObjectManager": "psccobjmgr_enu",
         "Language": "enu",
         "StartCommand": "",
         "EnableExtServiceOnly": false,

@@ -17,11 +17,14 @@
     },
     "RESTInBound": {
       "RESTAuthenticationProperties": {
+        "EnableAnonAccess": false,
         "AnonUserName": "$ANONUSER",
         "AnonPassword": "$ANONPASS",
-        "AuthenticationType": "Basic",
+        "AuthenticationType": "SSO",
+        "TrustToken": "HELLO",
+        "UserSpec": "X-Forwarded-Preferred-Username",
         "SessKeepAlive": 900,
-        "ValidateCertificate": true
+        "ValidateCertificate": false
       },
       "LogProperties": { "LogLevel": "ERROR" },
       "ObjectManager": "eaiobjmgr_enu",

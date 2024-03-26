@@ -1,5 +1,5 @@
 #!/bin/bash
-while getopts u:p:a:b:n:l:m:s:t: option
+while getopts u:p:a:b:n:l:m:s:t:f: option
 do
  case "${option}"
  in
@@ -12,12 +12,13 @@ do
  m)  export ANONPASS=${OPTARG};;
  s)  export SAIDOCKERHOST=${OPTARG};;
  t)  export SAIDOCKERPORT=${OPTARG};;
+ f)  export ProfileFileName=${OPTARG};;
 
  esac
 done
 ENCODED="$(echo $USER:$PASS|base64)"
 
-JSON=$(envsubst<../smc/createSAIProfile.json)
+JSON=$(envsubst<../smc/$ProfileFileName)
 
 echo
 echo $JSON

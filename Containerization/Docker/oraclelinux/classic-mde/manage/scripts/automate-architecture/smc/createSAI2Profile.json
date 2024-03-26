@@ -1,0 +1,109 @@
+{
+  "ConfigParam": {
+    "defaults": {
+      "DoCompression": false,
+      "EnableFQDN": false,
+      "AuthenticationProperties": {
+        "SessionTimeout": 9000,
+        "GuestSessionTimeout": 300,
+        "SessionTimeoutWLMethod": "HeartBeat",
+        "SessionTimeoutWLCommand": "UpdatePrefMsg",
+        "SessionTokenMaxAge": 2880,
+        "SessionTokenTimeout": 9000,
+        "SingleSignOn": false,
+        "AnonUserName": "$ANONUSER",
+        "AnonPassword": "$ANONPASS"
+      }
+    },
+    "RESTInBound": {
+      "RESTAuthenticationProperties": {
+        "EnableAnonAccess": false,
+        "AnonUserName": "$ANONUSER",
+        "AnonPassword": "$ANONPASS",
+        "AuthenticationType": "Basic",
+        "SessKeepAlive": 900,
+        "ValidateCertificate": false
+      },
+      "LogProperties": { "LogLevel": "ERROR" },
+      "ObjectManager": "eaiobjmgr_ism",
+      "Baseuri": "https://{{urlHost}}/{{icmSiebelName}}/v1.0/",
+      "MaxConnections": 20,
+      "RESTResourceParamList": []
+    },
+    "UI": { "LogProperties": { "LogLevel": "ERROR" } },
+    "EAI": { "LogProperties": { "LogLevel": "ERROR" } },
+    "DAV": { "LogProperties": { "LogLevel": "ERROR" } },
+    "RESTOutBound": { "LogProperties": { "LogLevel": "ERROR" } },
+    "SOAPOutBound": { "LogProperties": { "LogLevel": "ERROR" } },
+    "Applications": [
+      {
+        "Name": "epublicsector",
+        "ObjectManager": "dbssopsccobjmgr_enu",
+        "Language": "enu",
+        "StartCommand": "",
+        "EnableExtServiceOnly": false,
+        "AvailableInSiebelMobile": false,
+        "AuthenticationProperties": {
+          "SessionTimeout": 9000,
+          "GuestSessionTimeout": 300,
+          "SessionTimeoutWLMethod": "HeartBeat",
+          "SessionTimeoutWLCommand": "UpdatePrefMsg",
+          "SessionTokenMaxAge": 2880,
+          "SessionTokenTimeout": 9000,
+          "SingleSignOn": true,
+          "AnonUserName": "$ANONUSER",
+          "AnonPassword": "$ANONPASS",
+          "TrustToken": "HELLO",
+          "UserSpec": "X-Forwarded-Preferred-Username"
+        }
+      },
+      {
+        "Name": "epublicsector_db",
+        "ObjectManager": "psccobjmgr_enu",
+        "Language": "enu",
+        "StartCommand": "",
+        "EnableExtServiceOnly": false,
+        "AvailableInSiebelMobile": false,
+        "AuthenticationProperties": {
+          "SessionTimeout": 9000,
+          "GuestSessionTimeout": 300,
+          "SessionTimeoutWLMethod": "HeartBeat",
+          "SessionTimeoutWLCommand": "UpdatePrefMsg",
+          "SessionTokenMaxAge": 2880,
+          "SessionTokenTimeout": 9000,
+          "SingleSignOn": false,
+          "AnonUserName": "$ANONUSER",
+          "AnonPassword": "$ANONPASS"
+        }
+      },
+      {
+        "Name": "webtools",
+        "ObjectManager": "swtoolsobjmgr_enu",
+        "Language": "enu",
+        "StartCommand": "",
+        "EnableExtServiceOnly": false,
+        "AvailableInSiebelMobile": false,
+        "AuthenticationProperties": {
+          "SessionTimeout": 9000,
+          "GuestSessionTimeout": 300,
+          "SessionTimeoutWLMethod": "HeartBeat",
+          "SessionTimeoutWLCommand": "UpdatePrefMsg",
+          "SessionTokenMaxAge": 2880,
+          "SessionTokenTimeout": 9000,
+          "SingleSignOn": false,
+          "AnonUserName": "$ANONUSER",
+          "AnonPassword": "$ANONPASS"
+        }
+      }
+    ],
+    "RESTInBoundResource": [],
+    "swe": {
+      "Language": "ENU",
+      "MaxQueryStringLength": -1,
+      "SeedFile": "",
+      "SessionMonitor": false,
+      "AllowStats": true
+    }
+  },
+  "Profile": { "ProfileName": "$NAME" }
+}

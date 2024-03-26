@@ -35,6 +35,13 @@ bash ${ROOT}/generic/container/startSAI -n sai-${ENTERPRISE1} -v ${PV}/${ENTERPR
 set +x
 waitContainer sai-${ENTERPRISE1}
 echo
+echo "Starting sai2-${ENTERPRISE1}"
+echo
+set -x
+bash ${ROOT}/generic/container/startSAI -n sai2-${ENTERPRISE1} -v ${PV}/${ENTERPRISE1}/SAI2 -s ${PV}/${ENTERPRISE1}/SFS -p ${PORT2} -r $1 -c ${CONTAINERBASE} -o ${DOMAIN} -w ${DOCKERNET} -u ${RUNASUSER}
+set +x
+waitContainer sai2-${ENTERPRISE1}
+echo
 echo "Starting cgw-${ENTERPRISE1}"
 echo
 set -x

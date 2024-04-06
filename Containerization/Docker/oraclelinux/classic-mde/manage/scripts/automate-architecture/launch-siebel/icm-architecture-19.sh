@@ -1,4 +1,4 @@
-ROOT=/tmp/{{ NAME }}/ConfiguringSiebel/Containerization/Docker/oraclelinux/classic-mde/manage/scripts/automate-architecture
+ROOT={{TMPDIR}}/{{ NAME }}/ConfiguringSiebel/Containerization/Docker/oraclelinux/classic-mde/manage/scripts/automate-architecture
 PV={{ PV }}
 CONTAINERBASE=localhost/store/oracle/siebel
 DOMAIN=company.com
